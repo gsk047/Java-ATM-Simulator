@@ -548,3 +548,32 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
 !SUBENTRY 1 org.eclipse.core.expressions 4 201 2025-12-28 07:35:26.958
 !MESSAGE No property tester contributes a property org.eclipse.debug.ui.matchesPattern to type class org.eclipse.swt.custom.CTabItem
+!SESSION 2025-12-28 08:09:31.929 -----------------------------------------------
+eclipse.buildId=4.37.0.20250905-1455
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=en_IN
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/kawinsankar/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -product org.eclipse.epp.package.java.product -keyring /Users/kawinsankar/.eclipse_keyring -data file:/Users/kawinsankar/eclipse-workspace/JAVAProject/
+
+!ENTRY ch.qos.logback.classic 1 0 2025-12-28 08:09:33.416
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-12-28 08:09:33.577
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.31.0 (274) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-12-28 08:09:34.729
+!MESSAGE Logback config file: /Users/kawinsankar/eclipse-workspace/JAVAProject/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.egit.core 4 0 2025-12-28 09:28:07.208
+!MESSAGE An exception occurred during push on URI https://github.com/gsk047/Java-ATM-Simulator: https://github.com/gsk047/Java-ATM-Simulator: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/gsk047/Java-ATM-Simulator: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:695)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:637)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:140)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1533)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:204)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:123)

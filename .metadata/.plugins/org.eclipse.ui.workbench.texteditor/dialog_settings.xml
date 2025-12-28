@@ -4,9 +4,11 @@
 	<section name="java.lang.Class">
 		<item key="replaceBarOpen" value="true"/>
 		<list key="replacehistory">
+			<item value="depositTypeCheck"/>
 			<item value="selectedOption"/>
 		</list>
 		<list key="findhistory">
+			<item value="depositType"/>
 			<item value="ATMoption"/>
 		</list>
 	</section>
