@@ -2,7 +2,7 @@ package ProblemStatements.ATM;
 
 import java.util.Scanner;
 
-public class BankAccount {
+public abstract class BankAccount {
 
 	/*
 	 * Challenge: The Java ATM Simulator
@@ -93,6 +93,8 @@ public class BankAccount {
 	 * super.withDraw if you fix the validation there first).
 	 * 
 	 * Important: Don't forget the @Override annotation!
+	 * -----------------------------------------------------------------------------
+	 * 1. Change the class definition: public abstract class BankAccount.
 	 * 
 	 */
 
@@ -167,7 +169,6 @@ public class BankAccount {
 		String userNameString = scanner.next();
 
 		BankAccount account = new SavingsAccount(userNameString, 100000.00);
-		
 
 		int selectedOption;
 
@@ -178,7 +179,13 @@ public class BankAccount {
 			System.out.println("2. Deposit Money");
 			System.out.println("3. Withdraw Money");
 			System.out.println("4. Exit");
-			selectedOption = scanner.nextInt();
+			try {
+				selectedOption = scanner.nextInt();
+			} catch (Exception e) {
+				System.out.println("Invalid Input, please enter a number from 1 to 4");
+				scanner.next();
+				selectedOption = 0;
+			}
 			if (selectedOption == 1) {
 				System.out.println("Balance: " + account.getBalance());
 			} else if (selectedOption == 2) {
