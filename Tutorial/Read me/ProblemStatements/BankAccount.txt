@@ -1,5 +1,5 @@
 /*
-	 * Challenge: The Java ATM Simulator 
+	 * Challenge: The Java ATM Simulator
 	 * 
 	 * Objective: Build a console-based application that simulates a bank account,
 	 * enforcing object-oriented principles, input validation, and continuous user
@@ -87,4 +87,7 @@
 	 * super.withDraw if you fix the validation there first).
 	 * 
 	 * Important: Don't forget the @Override annotation!
+	 * -----------------------------------------------------------------------------
+	 * 1. Change the class definition: public abstract class BankAccount.
+	 * 
 	 */
