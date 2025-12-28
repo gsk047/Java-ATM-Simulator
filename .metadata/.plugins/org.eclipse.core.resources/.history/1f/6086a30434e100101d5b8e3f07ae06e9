@@ -1,0 +1,13 @@
+package ProblemStatements.ATM;
+
+public class ATM extends BankAccount{
+
+	public ATM(String name, double openingBalance) {
+		super(name, openingBalance);
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

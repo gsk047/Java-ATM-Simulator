@@ -1,0 +1,36 @@
+package StepByStep;
+
+public class Android extends SmartPhone {
+
+	public Android(String inputOS) {
+		super(inputOS);
+	}
+
+	/*
+	 * 9 We want Android to have a unique lock message.
+	 * 
+	 * Inside your Android class (not SmartPhone), can you write a method named
+	 * screenLock()?
+	 * 
+	 * It must have the exact same name and parameters (none) as the parent's
+	 * method.
+	 * 
+	 * Make it print "Android Pattern Locked!".
+	 */
+	
+	public void screenLock() {
+		System.out.println("Android Pattern Locked");
+	}
+
+	public static void main(String[] args) {
+		/*
+		 * 8 If we create that empty Android class above, and then I write this code in
+		 * main:
+		 */
+		Android myDroid = new Android("Android 15");
+		myDroid.screenLock();
+		myDroid.screenUnlock();
+
+	}
+
+}

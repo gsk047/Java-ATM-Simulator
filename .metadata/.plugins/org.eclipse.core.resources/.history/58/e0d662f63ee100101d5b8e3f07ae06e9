@@ -1,0 +1,162 @@
+package ProblemStatements.ATM;
+
+import java.util.Scanner;
+
+public class BankAccount {
+
+	/*
+	 * Challenge: The Java ATM Simulator
+	 * 
+	 * Objective: Build a console-based application that simulates a bank account,
+	 * enforcing object-oriented principles, input validation, and continuous user
+	 * interaction.
+	 * 
+	 * Technical Requirements:
+	 * 
+	 * 1. Object-Oriented Programming (Encapsulation & Class Structure)
+	 * 
+	 * Create a class named BankAccount.
+	 * 
+	 * Private Fields:
+	 * 
+	 * String accountHolderName
+	 * 
+	 * double balance
+	 * 
+	 * Constructor: Initialize the account with a name and an opening balance.
+	 * 
+	 * Methods:
+	 * 
+	 * void deposit(double amount): Adds money to the balance.
+	 * 
+	 * void withdraw(double amount): Deducts money from the balance (if sufficient
+	 * funds exist).
+	 * 
+	 * double getBalance(): Returns the current balance.
+	 * 
+	 * String getAccountName(): Returns the account holder's name.
+	 * 
+	 * 2. Conditional Logic (Validation & Safety)
+	 * 
+	 * In deposit(): Ensure the deposit amount is positive (> 0). Print an error
+	 * message if invalid.
+	 * 
+	 * In withdraw():
+	 * 
+	 * Check if the amount is positive.
+	 * 
+	 * Check if the amount is less than or equal to the current balance.
+	 * 
+	 * If the user tries to withdraw more than they have, print "Insufficient Funds"
+	 * and deny the transaction.
+	 * 
+	 * 3. Loops & User Interface (The main Method)
+	 * 
+	 * Inside your main method, create an instance of BankAccount (e.g., "John Doe",
+	 * $1000).
+	 * 
+	 * Use a while or do-while loop to keep the program running.
+	 * 
+	 * Inside the loop, display a menu:
+	 * 
+	 * --- ATM Menu --- 1. Check Balance 2. Deposit Money 3. Withdraw Money 4. Exit
+	 * 
+	 * Use a Scanner to get the user's choice and perform the corresponding action.
+	 * 
+	 * The program should only terminate when the user selects option 4.
+	 */
+
+	private String accountHolderName;
+	private double balance;
+	private static Scanner scanner = new Scanner(System.in);
+
+	public BankAccount() {
+
+	}
+
+	// Get User Name
+	public String getUserName() {
+		System.out.println("Enter your Name");
+		accountHolderName = scanner.next();
+		return accountHolderName;
+	}
+
+	// Initialize the account with a name and an opening balance.
+	public BankAccount(String name, double openingBalance) {
+		accountHolderName = name;
+		balance = openingBalance;
+	}
+
+	// Adds money to the balance.
+	public void deposit(double depositAmount) {
+		if (depositAmount > 0) {
+			balance = balance + depositAmount;
+		} else {
+			System.out.println("Enter a valid amount to deposite.");
+		}
+	}
+
+	// Deducts money from the balance (if sufficient funds exist).
+	public void withDraw(double withdrawalAmount) {
+		if (withdrawalAmount <= balance) {
+			balance = balance - withdrawalAmount;
+		} else {
+			System.out.println("Insufficient Balance");
+		}
+	}
+
+	// current balance
+	public double getBalance() {
+		return balance;
+	}
+
+	// account holder's name.
+	public String getAccountName() {
+		return accountHolderName;
+	}
+	
+	//Main Method
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		// Get the user name
+		System.out.println("Enter your Name");
+		String userNameString = scanner.next();
+
+		BankAccount account = new BankAccount(userNameString, 100000.00);
+
+		int selectedOption;
+
+		// Display Menu
+		do {
+			System.out.println("--- Select ATM Menu ---");
+			System.out.println("1. Check Balance");
+			System.out.println("2. Deposit Money");
+			System.out.println("3. Withdraw Money");
+			System.out.println("4. Exit");
+			selectedOption = scanner.nextInt();
+			if (selectedOption == 1) {
+				System.out.println("Balance: " + account.getBalance());
+			} else if (selectedOption == 2) {
+				System.out.println("Enter the Deposit Amount");
+				double depositeAmount = scanner.nextDouble();
+				account.deposit(depositeAmount);
+				System.out.println("Amount Demposited");
+				System.out.println("Balance: " + account.getBalance());
+			} else if (selectedOption == 3) {
+				System.out.println("Enter the Withdrawal Amount");
+				double withDrawalAmount = scanner.nextDouble();
+				account.withDraw(withDrawalAmount);
+				System.out.println("Amount Withdrawn");
+				System.out.println("Balance: " + account.getBalance());
+			} else if (selectedOption == 4) {
+				continue;
+			} else {
+				System.out.println("Enter valid Menu number");
+			}
+		} while (selectedOption != 4);
+
+		System.out.println(" Thanks for using the ATM");
+
+	}
+
+}

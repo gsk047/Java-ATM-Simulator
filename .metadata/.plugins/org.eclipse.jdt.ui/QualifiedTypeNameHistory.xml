@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ProblemStatements.TicketDispenser"/>
+    <fullyQualifiedTypeName name="StepByStep.SmartPhone"/>
+    <fullyQualifiedTypeName name="StepByStep.Android"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="ProblemStatements.ATM.ATM"/>
+    <fullyQualifiedTypeName name="ProblemStatements.ATM.BankAccount"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>

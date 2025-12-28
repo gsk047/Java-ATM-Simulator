@@ -1,0 +1,25 @@
+package ProblemStatements.ATM;
+
+public class ATM extends BankAccount{
+
+	public ATM(String name, double openingBalance) {
+		super(name, openingBalance);
+	}
+	
+	public ATM() {}
+
+	public static void main(String[] args) {
+		
+		//Get the user name
+		ATM  user = new ATM();
+		String userNameString =  user.getUserName();
+		
+		ATM account = new ATM(userNameString, 100000.00);
+		
+		
+		
+		
+
+	}
+
+}

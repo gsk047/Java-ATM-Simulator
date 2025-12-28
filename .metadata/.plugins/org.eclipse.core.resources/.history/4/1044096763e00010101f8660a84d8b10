@@ -1,0 +1,10 @@
+package ProblemStatements;
+
+public class TicketDispenser {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package StepByStep;
+
+public class Android extends SmartPhone {
+
+	public Android(String inputOS) {
+		super(inputOS);
+	}
+
+	public static void main(String[] args) {
+		/*
+		 * 8 If we create that empty Android class above, and then I write this code in
+		 * main:
+		 */
+		Android myDroid = new Android("Android 15");
+		myDroid.screenLock();
+		
+
+	}
+
+}

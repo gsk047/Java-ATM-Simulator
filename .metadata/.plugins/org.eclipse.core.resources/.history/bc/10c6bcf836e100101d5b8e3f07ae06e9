@@ -1,0 +1,61 @@
+package ProblemStatements.ATM;
+
+import java.util.Scanner;
+
+public class ATM extends BankAccount{
+
+	public ATM(String name, double openingBalance) {
+		super(name, openingBalance);
+	}
+	
+	public ATM() {}
+
+	public static void main(String[] args) {
+		
+		//Get the user name
+		ATM  user = new ATM();
+		String userNameString =  user.getUserName();
+		
+		
+		ATM account = new ATM(userNameString, 100000.00);
+		
+		int ATMoption;
+		
+		//Display Menu
+		do {
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("--- Select ATM Menu ---");
+			System.out.println("1. Check Balance");
+			System.out.println("2. Deposit Money");
+			System.out.println("3. Withdraw Money");
+			System.out.println("4. Exit");
+			ATMoption = scanner.nextInt();
+			
+			switch (ATMoption) {
+			case 1:
+				account.getBalance();
+				break;
+			case 2:
+				System.out.println("Enter the Deposit Amount");
+				double depositeAmount = scanner.nextDouble();
+				account.deposit(depositeAmount);
+				break;
+			case 3:
+				System.out.println("Enter the Withdrawal Amount");
+				double withDrawalAmount = scanner.nextDouble();
+				account.deposit(withDrawalAmount);
+				break;
+			case 4:
+				break;
+
+			default:
+				System.out.println("Enter valid Menu number");
+			}
+			
+		} while (ATMoption != 4);
+		
+		
+
+	}
+
+}

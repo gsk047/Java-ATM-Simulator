@@ -1,0 +1,90 @@
+/*
+	 * Challenge: The Java ATM Simulator 
+	 * 
+	 * Objective: Build a console-based application that simulates a bank account,
+	 * enforcing object-oriented principles, input validation, and continuous user
+	 * interaction.
+	 * 
+	 * Technical Requirements:
+	 * 
+	 * 1. Object-Oriented Programming (Encapsulation & Class Structure)
+	 * 
+	 * Create a class named BankAccount.
+	 * 
+	 * Private Fields:
+	 * 
+	 * String accountHolderName
+	 * 
+	 * double balance
+	 * 
+	 * Constructor: Initialize the account with a name and an opening balance.
+	 * 
+	 * Methods:
+	 * 
+	 * void deposit(double amount): Adds money to the balance.
+	 * 
+	 * void withdraw(double amount): Deducts money from the balance (if sufficient
+	 * funds exist).
+	 * 
+	 * double getBalance(): Returns the current balance.
+	 * 
+	 * String getAccountName(): Returns the account holder's name.
+	 * 
+	 * 2. Conditional Logic (Validation & Safety)
+	 * 
+	 * In deposit(): Ensure the deposit amount is positive (> 0). Print an error
+	 * message if invalid.
+	 * 
+	 * In withdraw():
+	 * 
+	 * Check if the amount is positive.
+	 * 
+	 * Check if the amount is less than or equal to the current balance.
+	 * 
+	 * If the user tries to withdraw more than they have, print "Insufficient Funds"
+	 * and deny the transaction.
+	 * 
+	 * 3. Loops & User Interface (The main Method)
+	 * 
+	 * Inside your main method, create an instance of BankAccount (e.g., "John Doe",
+	 * $1000).
+	 * 
+	 * Use a while or do-while loop to keep the program running.
+	 * 
+	 * Inside the loop, display a menu:
+	 * 
+	 * --- ATM Menu --- 1. Check Balance 2. Deposit Money 3. Withdraw Money 4. Exit
+	 * 
+	 * Use a Scanner to get the user's choice and perform the corresponding action.
+	 * 
+	 * The program should only terminate when the user selects option 4.
+	 * -----------------------------------------------------------------------------
+	 * Overloading: what if a user wants to deposit a check and add a small "memo"
+	 * or note about where it came from (e.g., "Salary", "Gift")?
+	 * 
+	 * Your Task: Inside your BankAccount class, add a second deposit method.
+	 * 
+	 * It must be named deposit.
+	 * 
+	 * It must accept two inputs: a double amount AND a String note.
+	 * 
+	 * Inside, it should add the amount to the balance (just like the original) and
+	 * then System.out.println the note.
+	 * -----------------------------------------------------------------------------
+	 * Overriding: Your Task:
+	 * 
+	 * Create a new class SavingsAccount that extends BankAccount.
+	 * 
+	 * Add a constructor (you'll need to call super(name, balance)).
+	 * 
+	 * Override the withDraw method.
+	 * 
+	 * It should check if (balance - amount) is less than 500.
+	 * 
+	 * If it is, print "Cannot Withdraw: Minimum balance of $500 required."
+	 * 
+	 * If not, proceed with the withdrawal (you can copy the logic or call
+	 * super.withDraw if you fix the validation there first).
+	 * 
+	 * Important: Don't forget the @Override annotation!
+	 */

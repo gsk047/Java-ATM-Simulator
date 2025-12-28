@@ -1,0 +1,47 @@
+package ProblemStatements;
+
+/*
+The Scenario: The Coffee Shop Queue
+
+Imagine you are writing a small program for a coffee shop's ticket machine. You need to create a class called TicketDispenser.
+
+The Requirements:
+
+It should have a method named dispense().
+
+Every time dispense() is called, it should print the next number in the sequence.
+
+First call: "Ticket #1"
+
+Second call: "Ticket #2"
+
+Third call: "Ticket #3"
+
+Your Task: Draft the code for this TicketDispenser class.
+ */
+
+public class TicketDispenser {
+
+	private static int ticketNumber = 0;
+
+	public static void main(String[] args) {
+		// dispense() is not a static method. Create an object which will call the main
+		// method
+		TicketDispenser classObject = new TicketDispenser();
+
+		// Call the dispense()
+		classObject.dispense();
+		classObject.dispense();
+
+//		TicketDispenser.dispense();
+//		TicketDispenser.dispense();
+
+	}
+
+	public void dispense() {
+		ticketNumber++;
+		System.out.println("Ticket #" + ticketNumber);
+
+	}
+
+}

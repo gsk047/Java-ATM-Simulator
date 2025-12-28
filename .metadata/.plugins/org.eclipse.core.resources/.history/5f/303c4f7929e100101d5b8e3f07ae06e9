@@ -1,0 +1,42 @@
+package StepByStep;
+
+public class SmartPhone {
+	
+	String os;
+	
+	/*
+	 Can you try writing the code for the SmartPhone constructor? It needs to:
+
+		Be named SmartPhone.
+		
+		Accept a String variable inside the parentheses () (let's call it inputOS).
+		
+		Inside the curly braces {}, assign that input to our class field OS.
+	 */
+	
+	public SmartPhone(String inputOS) {
+		
+		os = inputOS;
+		
+	}
+	
+	/*
+	 Can you write the Java code for the main method that creates two distinct phone objects:
+
+		A phone named phone1 that passes in "Android".
+		
+		A phone named phone2 that passes in "iOS".
+	 */
+	
+	public static void main(String[] args) {
+		SmartPhone phone1 = new SmartPhone("Android");
+		SmartPhone phone2 = new SmartPhone("IOS");
+		
+		/*
+		 Using the dot operator . (which acts like a key to open the object), can you write a line of code inside main to print the OS of phone1 to the console?
+		 */
+		System.out.println(phone1.os);
+		
+	}
+	
+}
