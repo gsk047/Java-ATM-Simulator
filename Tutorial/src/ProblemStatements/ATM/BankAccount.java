@@ -2,7 +2,7 @@ package ProblemStatements.ATM;
 
 import java.util.Scanner;
 
-public abstract class BankAccount {
+public abstract class BankAccount implements atmCompatible{
 
 	/*
 	 * Challenge: The Java ATM Simulator
@@ -168,7 +168,9 @@ public abstract class BankAccount {
 		System.out.println("Enter your Name");
 		String userNameString = scanner.next();
 
-		BankAccount account = new SavingsAccount(userNameString, 100000.00);
+//		BankAccount account = new SavingsAccount(userNameString, 100000.00);
+		
+		atmCompatible account = new BitcoinWallet(1.5);
 
 		int selectedOption;
 

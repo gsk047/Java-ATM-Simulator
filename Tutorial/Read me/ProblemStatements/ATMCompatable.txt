@@ -1,0 +1,57 @@
+1. Goal: Create a rulebook that says "Anything that wants to use this ATM must have these three abilities."
+
+File Name: ATMCompatible.java
+
+Type: interface (not class)
+
+Requirements: Declare three method signatures (no body/curly braces {}).
+
+getBalance(): Returns a double.
+
+deposit(): Takes a double amount and returns void.
+
+withDraw(): Takes a double amount and returns void. (Note: Make sure the spelling matches your existing code exactly!)
+
+
+2. The Retrofit (Update Existing Code) 🛠️
+
+Goal: Tell your existing BankAccount structure that it is now officially "ATM Compatible."
+
+File: BankAccount.java
+
+Action: Update the class definition line.
+
+Keyword: Use implements to connect the class to your new interface.
+
+Hint: Since your BankAccount class already has methods named deposit, withDraw, and getBalance, do you need to write any new code inside? (Think about it!)
+
+
+3. The New Contender (New Class) ₿
+
+Goal: Create a completely different type of account that follows the same rules but works differently internally.
+
+File Name: BitcoinWallet.java
+
+Type: Class
+
+Action: Implement the ATMCompatible interface.
+
+Internal Data: It needs its own private variable for money (e.g., private double cryptoBalance).
+
+Constructor: It needs a way to set the starting Bitcoin amount.
+
+Methods: You must implement all three interface methods.
+
+Logic: similar to BankAccount (add/subtract), but maybe print "BTC" instead of "$" in the console messages so you can tell the difference.
+
+4. The Main Event (Update Logic) 🧪
+
+Goal: Prove that the ATM doesn't care what card is inserted, as long as it fits the slot.
+
+File: ATM.java (your main method)
+
+Action: Change the Type of your main account variable.
+
+From: BankAccount account = ...
+
+To: ATMCompatible account = ...
